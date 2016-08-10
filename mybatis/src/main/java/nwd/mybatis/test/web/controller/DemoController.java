@@ -41,6 +41,10 @@ public class DemoController {
 		return result;
 	}
 	
+	public void testGetV1(){
+		System.out.println("This is developer brach...");
+	}
+	
 	@RequestMapping("/checkUser")
 	@ResponseBody
 	public Map<String, Object> checkUser(
