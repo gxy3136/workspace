@@ -6,20 +6,42 @@ import java.util.Map;
 import nwd.mybatis.test.web.model.Demo;
 import nwd.mybatis.test.web.service.DemoService;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.alibaba.fastjson.JSONObject;
+
 @Controller
 @RequestMapping("/sample")
 public class DemoController {
 
+	protected Logger logger = Logger.getLogger(DemoController.class);
+
 	@Autowired
 	private DemoService service;
+
+	/**
+	 * @param requestBody
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/bind")
+	public Map<String, Object> bind(@RequestBody JSONObject requestBody) {
+		Map<String, Object> result = new HashMap<String, Object>();
+		try {
+
+		} catch (Exception e) {
+			logger.error(e);
+		}
+		return result;
+	}
 
 	@RequestMapping("/queryData")
 	@ResponseBody
