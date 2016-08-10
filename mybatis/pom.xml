@@ -6,7 +6,7 @@
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>qqqq
 	<name>myibatis Maven Webapp</name>
-	<url>http://maven.apache.org</url>
+	<url>http://maven.apache.org</url>adasd
 	<properties>
 		<springversion>4.1.6.RELEASE</springversion>
 		<mybatis.version>3.2.6</mybatis.version>
