@@ -40,11 +40,15 @@ public class DemoController {
 		}
 		return result;
 	}
-	
-	public void testGetV1(){
+
+	public void testGetV1() {
 		System.out.println("This is developer brach...");
 	}
-	
+
+	private void testGetV() {
+		System.out.println("This is dev_test brach...");
+	}
+
 	@RequestMapping("/checkUser")
 	@ResponseBody
 	public Map<String, Object> checkUser(
@@ -58,7 +62,7 @@ public class DemoController {
 		}
 		return result;
 	}
-	
+
 	@RequestMapping("/vote")
 	@ResponseBody
 	public Map<String, Object> vote(
