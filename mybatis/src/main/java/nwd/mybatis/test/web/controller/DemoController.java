@@ -40,6 +40,20 @@ public class DemoController {
 		}
 		return result;
 	}
+	
+	@RequestMapping("/vote")
+	@ResponseBody
+	public Map<String, Object> vote(
+			@RequestParam(required = false, value = "userId") String userId,
+			@RequestParam(required = false, value = "phone") String phone) {
+		Map<String, Object> result = new HashMap<String, Object>();
+		try {
+			System.out.println("hello");
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return result;
+	}
 
 	/**
 	 * @param requestBody
