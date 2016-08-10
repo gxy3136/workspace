@@ -4,9 +4,11 @@
 	<groupId>nwd.test</groupId>
 	<artifactId>myibatis</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>qqqq
-	<name>myibatis Maven Webapp</name>aaaa
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>myibatis Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+
 	<properties>
 		<springversion>4.1.6.RELEASE</springversion>
 		<mybatis.version>3.2.6</mybatis.version>
