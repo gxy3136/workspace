@@ -1,5 +1,9 @@
 package nwd.mybatis.test.web.controller;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -131,13 +135,36 @@ public class DemoController {
 		return modelAndView;
 	}
 
-	public static void main(String[] args) {
-		String testCode = "Test";
-		byte[] bytes = testCode.getBytes();
-		for (byte b : bytes) {
-			System.out.print(b);
+	 public static void main(String args[]) {
+	     try {
+	    	 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			Date end= sdf.parse("2016-08-09 14:00:00");
+			Date now = new Date();
+			System.out.println(now.before(end));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		System.out.println();
-		System.out.println(testCode.getBytes());
-	}
+	    }
+	    public static int compare_date(String DATE1, String DATE2) {
+	        
+	        Date s;
+	        DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+	        try {
+	            Date dt1 = df.parse(DATE1);
+	            Date dt2 = df.parse(DATE2);
+	            if (dt1.getTime() > dt2.getTime()) {
+	                System.out.println("dt1 在dt2前");
+	                return 1;
+	            } else if (dt1.getTime() < dt2.getTime()) {
+	                System.out.println("dt1在dt2后");
+	                return -1;
+	            } else {
+	                return 0;
+	            }
+	        } catch (Exception exception) {
+	            exception.printStackTrace();
+	        }
+	        return 0;
+	    }
 }
