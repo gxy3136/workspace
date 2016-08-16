@@ -72,4 +72,26 @@
 			<ref local="transactionManager" />
 		</property>
 	</bean>
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="test"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="test" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" ref="jobDetail"></property>
+		<property name="startDelay" value="1000"></property>
+		<property name="repeatInterval" value="5000"></property>
+	</bean>
+<!-- 	<bean id="test" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"> -->
+<!-- 		<property name="jobDetail" ref="jobDetail"></property> -->
+<!-- 		<property name="startDelay" value="60000"></property> -->
+<!-- 		<property name="repeatInterval" value="1800000"></property> -->
+<!-- 	</bean> -->
+	<bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="synchronizeVoteInfo" />
+		<property name="targetMethod" value="doIt" />
+	</bean>
+<!-- 	<bean id="sample" class="nwd.mybatis.test.web.timerjob.Sample"></bean> -->
 </beans>

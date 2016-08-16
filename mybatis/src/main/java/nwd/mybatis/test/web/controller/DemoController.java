@@ -3,8 +3,11 @@ package nwd.mybatis.test.web.controller;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import nwd.mybatis.test.web.model.Demo;
@@ -147,7 +150,8 @@ public class DemoController {
 		}
 	    }
 	    public static int compare_date(String DATE1, String DATE2) {
-	        
+	    	List list = new ArrayList();
+	        Collections.sort(list);
 	        Date s;
 	        DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm");
 	        try {
