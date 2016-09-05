@@ -23,7 +23,6 @@
 
     http://www.springframework.org/schema/util/spring-util-3.0.xsd
     ">
-    <context:annotation-config/>
     <context:component-scan base-package="nwd.mybatis.test.web.*">
     	<context:include-filter type="regex" expression="nwd.mybatis.test.web.service.*Mock"/>
     </context:component-scan>
