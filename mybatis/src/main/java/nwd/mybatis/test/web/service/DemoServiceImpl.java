@@ -17,6 +17,7 @@ public class DemoServiceImpl implements DemoService {
 	public List<Demo> selectAll() {
 		List<Demo> demos;
 		demos = mapper.selectAll();
+		System.out.println("visit service...");
 		return demos;
 	}
 

@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:applicationContextTest.xml")
-public class DemoServiceTest extends AbstractJUnit4SpringContextTests {
+public class DemoControllerTest extends AbstractJUnit4SpringContextTests {
 	@Autowired
 	private DemoController controller;
 
