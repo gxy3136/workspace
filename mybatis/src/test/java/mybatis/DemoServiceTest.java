@@ -1,7 +1,8 @@
 package mybatis;
 
-import nwd.mybatis.test.web.model.Demo;
-import nwd.mybatis.test.web.service.DemoService;
+import java.util.Map;
+
+import nwd.mybatis.test.web.controller.DemoController;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,11 +15,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = "classpath:applicationContextTest.xml")
 public class DemoServiceTest extends AbstractJUnit4SpringContextTests {
 	@Autowired
-	private DemoService service;
+	private DemoController controller;
 
 	@Test
 	public void testGetV() {
-		Demo demo = service.selectById(1);
-		System.out.println(demo.getId() + "----" + demo.getContent());
+		Map<String, Object>  result = controller.login("10000", "13888888888");
+		System.out.println("hello world |"+result);
 	}
 }
