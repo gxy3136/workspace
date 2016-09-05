@@ -23,7 +23,6 @@
 
     http://www.springframework.org/schema/util/spring-util-3.0.xsd
     ">
-	<context:component-scan base-package="nwd.mybatis.test.web.service.mapper.*" />
 	<!-- 引入配置文件 -->
 	<context:property-placeholder ignore-unresolvable="true" location="classpath:*/*.properties" />
 
